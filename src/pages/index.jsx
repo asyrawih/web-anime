@@ -69,9 +69,11 @@ const Home = () => {
 
 export const Card = () => {
   return (
-    <div className="card w-full md:h-56 md:w-auto rounded-md  relative shadow-2xl cursor-pointer hover:bg-gray-400 hover:opacity-60">
+    <div className="card w-full md:h-56 md:w-auto rounded-md  relative shadow-2xl cursor-pointer hover:bg-gray-800 hover:opacity-60">
       <img
         className="w-full h-full rounded-md z-10"
+        width={300}
+        height={300}
         src="https://images.unsplash.com/flagged/photo-1572491259205-506c425b45c3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
         alt="anime"
       />
