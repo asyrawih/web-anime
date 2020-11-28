@@ -35,7 +35,7 @@ const Mobile = () => {
 export const SlideUp = ({ show, setShow }) => {
   const variants = {
     open: { opacity: 1, y: -100 },
-    closed: { opacity: 0, y: 0 },
+    closed: { opacity: 0, y: 1000 },
   };
 
   return (
@@ -43,16 +43,14 @@ export const SlideUp = ({ show, setShow }) => {
       animate={show ? "open" : "closed"}
       variants={variants}
       transition={{ ease: "easeOut", duration: 0.5 }}
-      className="fixed bg-white w-auto h-80 bottom-20 md:hidden px-4 mx-4 rounded-lg flex  justify-center"
+      className={`fixed bg-white w-auto h-80 bottom-20 md:hidden px-4 mx-4 rounded-lg   justify-center`}
     >
-      <div className="block">
         <div className="flex w-auto bg-indigo-700 mt-3 justify-center text-center">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos odio
         </div>
-        <div className="flex justify-center bg-indigo-900 p-3" onClick={() => setShow(!show)}>
-          Close
+        <div className="flex justify-center bg-indigo-900 p-3">
+          <button onClick={() => setShow(!show)}>Close</button>
         </div>
-      </div>
     </motion.div>
   );
 };
