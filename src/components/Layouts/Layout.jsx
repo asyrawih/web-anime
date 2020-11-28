@@ -7,7 +7,7 @@ const Layout = ({children}) => {
   return (
     <>
       <Navbar />
-      <div className="flex pl-32 pr-10">
+      <div className="pr-10 pl-10 md:pl-32">
         {children}
       </div>
     </>

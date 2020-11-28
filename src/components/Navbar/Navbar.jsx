@@ -7,7 +7,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
     <>
-      <div className="navbar hidden md:flex flex-col w-20 h-screen shadow-2xl fixed">
+      <div className="navbar hidden md:flex flex-col w-20 h-screen shadow-2xl fixed z-50">
         <div className="bg-gray-200 p-3 text-center">Logo</div>
         <div className="flex flex-col h-screen justify-center space-y-5">
           <div
