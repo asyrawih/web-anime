@@ -3,6 +3,7 @@
 import React from "react";
 import Layout from "../components/Layouts/Layout";
 import Head from "next/head";
+import { motion } from "framer-motion";
 const Home = () => {
   const panjang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
@@ -12,8 +13,10 @@ const Home = () => {
       </Head>
       <main>
         <header className="flex justify-between md:px-24 md:py-10">
-          <span className="md:text-2xl text-gray-200">Nonton Stream Anime</span>
-          <span className="text-white">Home</span>
+          <span className=" p-3 text-2xl text-gray-200">
+            Nonton Stream Anime
+          </span>
+          <span className="p-4 text-white">Home</span>
         </header>
         <div className="flex flex-col md:flex-row justify-center md:space-x-2 mb-2">
           <div className="left_content   md:flex md:w-1/6 rounded-lg mb-2 ">
@@ -21,7 +24,7 @@ const Home = () => {
               <span className="font-mono font-bold text-secondary text-xl border-b-4 border-gray-600">
                 Ongoing
               </span>
-              <p className={'text-white'}>
+              <p className={"text-white"}>
                 ducimus! Aut, eaque nostrum quibusdam quaerat optio hic repellat
                 rerum est corporis ullam! Sapiente vero eligendi dolorem eaque
                 nulla hic dolorum!
@@ -32,7 +35,7 @@ const Home = () => {
             <span className="font-mono font-bold text-secondary text-xl border-b-4 border-gray-600">
               Latest Anime
             </span>
-            <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-4 gap-3 mt-2">
+            <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-2 lg:grid-cols-4  md:grid-rows-3 gap-3 mt-2">
               {panjang.map((_, index) => (
                 <Card key={index} />
               ))}
@@ -69,21 +72,23 @@ const Home = () => {
 
 export const Card = () => {
   return (
-    <div className="card w-full md:h-56 md:w-auto rounded-md  relative shadow-2xl cursor-pointer hover:bg-gray-800 hover:opacity-60">
-      <img
-        className="w-full h-full rounded-md z-10"
-        width={300}
-        height={300}
-        src="https://images.unsplash.com/flagged/photo-1572491259205-506c425b45c3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
-        alt="anime"
-      />
-      <span className="absolute top-3 left-3 font-bold z-30 text-secondary text-xs">
-        2020
-      </span>
-      <span className="absolute right-3 top-3 z-30 text-secondary text-xs font-bold">
-        *7
-      </span>
-    </div>
+    <motion.div whileHover={{ scale: 1.0 }} whileTap={{ scale: 0.9 }}>
+      <div className="card w-full md:h-48 md:w-auto rounded-md  relative shadow-2xl cursor-pointer hover:bg-gray-800 hover:opacity-60">
+        <img
+          className="w-full h-full rounded-md z-10"
+          width={300}
+          height={300}
+          src="https://images.unsplash.com/flagged/photo-1572491259205-506c425b45c3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+          alt="anime"
+        />
+        <span className="absolute top-3 left-3 font-bold z-30 text-secondary text-xs">
+          2020
+        </span>
+        <span className="absolute right-3 top-3 z-30 text-secondary text-xs font-bold">
+          *7
+        </span>
+      </div>
+    </motion.div>
   );
 };
 
