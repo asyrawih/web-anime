@@ -1,9 +1,10 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layouts/Layout";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { GoPlay } from "react-icons/go";
 const Home = () => {
   const panjang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
@@ -71,22 +72,45 @@ const Home = () => {
 };
 
 export const Card = () => {
+  const [show, setShow] = useState(false);
+  const hovering = (e) => {
+    console.log("i am hovering");
+    setShow(true);
+  };
+
+  const endHover = () => {
+    setShow(false);
+  };
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, y: 0 },
+  };
+
   return (
-    <motion.div whileHover={{ scale: 1.0 }} whileTap={{ scale: 0.9 }}>
-      <div className="card w-full md:h-48 md:w-auto rounded-md  relative shadow-2xl cursor-pointer hover:bg-gray-800 hover:opacity-60">
+    <motion.div
+      whileHover={{ scale: 1.0 }}
+      whileTap={{ scale: 0.9 }}
+      onHoverStart={hovering}
+      onHoverEnd={endHover}
+    >
+      <div className="card w-full md:h-48 md:w-auto rounded-md relative shadow-2xl cursor-pointer select-none ">
         <img
-          className="w-full h-full rounded-md z-10"
+          className="w-full h-full rounded-md"
           width={300}
           height={300}
           src="https://images.unsplash.com/flagged/photo-1572491259205-506c425b45c3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
           alt="anime"
         />
-        <span className="absolute top-3 left-3 font-bold z-30 text-secondary text-xs">
+        <span className="absolute top-3 left-3 font-bold text-secondary text-xs">
           2020
         </span>
-        <span className="absolute right-3 top-3 z-30 text-secondary text-xs font-bold">
+        <span className="absolute right-3 top-3  text-secondary text-xs font-bold">
           *7
         </span>
+        <motion.div variants={variants} animate={show ? "open" : "closed"}>
+          <GoPlay className="hidden md:flex absolute text-4xl bottom-0 left-12 top-20 text-secondary  " />
+        </motion.div>
       </div>
     </motion.div>
   );
