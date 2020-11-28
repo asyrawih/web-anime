@@ -1,13 +1,14 @@
 /** @format */
 
+import { AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar/Navbar";
 import "../styles/tailwind.css";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
-    <>
-      <Component {...pageProps} />
-    </>
+    <AnimatePresence exitBeforeEnter >
+      <Component {...pageProps} key={router.route} />
+    </AnimatePresence>
   );
 }
 
