@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+
+body {
+    @apply bg-primary
+}
+
+.navbar {
+    @apply bg-accent
+}
+
+@tailwind utilities;

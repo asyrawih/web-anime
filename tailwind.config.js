@@ -1,11 +1,19 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#222831',
+        accent: '#393e46',
+        secondary: '#ffd369'
+      }
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+
+    },
   },
   plugins: [],
 }
