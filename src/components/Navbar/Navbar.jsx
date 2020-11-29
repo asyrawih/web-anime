@@ -30,12 +30,16 @@ const Navbar = () => {
           </div>
           <div className="px-4 py-3 text-white font-mono rounded-md mx-1 h-12 cursor-pointer select-none">
             <Link href="/tags">
-              <HiTag className="text-3xl hover:text-secondary" />
+              <a>
+                <HiTag className="text-3xl hover:text-secondary" />
+              </a>
             </Link>
           </div>
           <div className="px-4 py-3 text-white font-mono rounded-md mx-1 h-12 cursor-pointer select-none">
             <Link href="/jadwal">
-              <HiOutlineCalendar className="text-3xl hover:text-secondary" />
+              <a>
+                <HiOutlineCalendar className="text-3xl hover:text-secondary" />
+              </a>
             </Link>
           </div>
         </div>

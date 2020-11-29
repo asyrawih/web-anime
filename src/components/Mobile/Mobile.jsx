@@ -11,12 +11,16 @@ const Mobile = () => {
       <div className="navbar flex justify-around w-full h-20 shadow-2xl bottom-0 fixed md:hidden py-2 px-2">
         <div className="text-center flex justify-center  bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md p-5">
           <Link href="/">
-            <HiHome className="text-secondary text-4xl pb-2" />
+            <a>
+              <HiHome className="text-secondary text-4xl pb-2" />
+            </a>
           </Link>
         </div>
         <div className="text-center flex justify-center  bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md p-5">
           <Link href="/jadwal">
-            <HiOutlineCalendar className="text-secondary text-4xl pb-2" />
+            <a>
+              <HiOutlineCalendar className="text-secondary text-4xl pb-2" />
+            </a>
           </Link>
         </div>
         <div className="text-center flex justify-center  bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md p-5">
@@ -24,7 +28,9 @@ const Mobile = () => {
         </div>
         <div className="text-center flex justify-center  bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md p-5">
           <Link href="/tags">
-            <HiTag className="text-secondary text-4xl pb-2" />
+            <a>
+              <HiTag className="text-secondary text-4xl pb-2" />
+            </a>
           </Link>
         </div>
       </div>
