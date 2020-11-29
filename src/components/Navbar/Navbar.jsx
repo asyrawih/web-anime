@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { GoFlame } from "react-icons/go";
-import Link from "next/link";
+import NextLink from "next/link";
 import {
   HiOutlineChevronLeft,
   HiSearch,
@@ -17,9 +17,11 @@ const Navbar = () => {
     <>
       <div className="navbar hidden md:flex flex-col w-20 h-screen shadow-2xl fixed ">
         <div className="p-3 text-center bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md">
-          <Link href="/">
-            <GoFlame className="text-5xl text-secondary" />
-          </Link>
+          <NextLink href="/">
+            <a>
+              <GoFlame className="text-5xl text-secondary" />
+            </a>
+          </NextLink>
         </div>
         <div className="flex flex-col h-screen justify-center space-y-5">
           <div
@@ -29,18 +31,18 @@ const Navbar = () => {
             <HiSearch className="text-3xl hover:text-secondary" />
           </div>
           <div className="px-4 py-3 text-white font-mono rounded-md mx-1 h-12 cursor-pointer select-none">
-            <Link href="/tags">
+            <NextLink href="/tags">
               <a>
                 <HiTag className="text-3xl hover:text-secondary" />
               </a>
-            </Link>
+            </NextLink>
           </div>
           <div className="px-4 py-3 text-white font-mono rounded-md mx-1 h-12 cursor-pointer select-none">
-            <Link href="/jadwal">
+            <NextLink href="/jadwal">
               <a>
                 <HiOutlineCalendar className="text-3xl hover:text-secondary" />
               </a>
-            </Link>
+            </NextLink>
           </div>
         </div>
         <div className="footer h-12 text-white font-mono mx-1">

@@ -5,6 +5,8 @@ import Layout from "../components/Layouts/Layout";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { GoPlay } from "react-icons/go";
+import Link from "next/link";
+
 const Home = () => {
   const panjang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (

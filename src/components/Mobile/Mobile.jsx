@@ -1,37 +1,36 @@
 /** @format */
 
+import React from "react";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
-import { GoFlame } from "react-icons/go";
 import { HiHome, HiOutlineCalendar, HiSearch, HiTag } from "react-icons/hi";
-import Link from "next/link";
+import NextLink from 'next/link'
 const Mobile = () => {
   return (
     <>
       <div className="navbar flex justify-around w-full h-20 shadow-2xl bottom-0 fixed md:hidden py-2 px-2">
         <div className="text-center flex justify-center  bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md p-5">
-          <Link href="/">
+          <NextLink href="/"  >
             <a>
               <HiHome className="text-secondary text-4xl pb-2" />
             </a>
-          </Link>
+          </NextLink>
         </div>
         <div className="text-center flex justify-center  bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md p-5">
-          <Link href="/jadwal">
+          <NextLink href="/jadwal"  >
             <a>
               <HiOutlineCalendar className="text-secondary text-4xl pb-2" />
             </a>
-          </Link>
+          </NextLink>
         </div>
         <div className="text-center flex justify-center  bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md p-5">
           <HiSearch className="text-secondary text-4xl pb-2" />
         </div>
         <div className="text-center flex justify-center  bg-gradient-to-tr from-gray-400 via-red-600 to-yellow-500 rounded-md p-5">
-          <Link href="/tags">
+          <NextLink href="/tags" >
             <a>
               <HiTag className="text-secondary text-4xl pb-2" />
             </a>
-          </Link>
+          </NextLink>
         </div>
       </div>
       {/* <SlideUp show={show} setShow={setShow} /> */}
